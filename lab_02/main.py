@@ -323,12 +323,6 @@ class myUpperWindow:
         self.left.rotate(angle, xc, yc)
         self.right.rotate(angle, xc, yc)
 
-    def draw(self, color='black'):
-        centx, centy = self.center.getCoordinatesForCanvas()
-        canvasField.create_oval(centx - self.radiusx, centy - self.radiusy, centx + self.radiusx, centy + self.radiusy)
-        canvasField.create_line(self.left.getCoordinatesForCanvas(), self.right.getCoordinatesForCanvas(), fill=color)
-        canvasField.create_line(self.up.getCoordinatesForCanvas(), self.down.getCoordinatesForCanvas(), fill=color)
-
     def draw_as_ellipse(self):
         for i in range(1, len(self.mas)):
             first = self.mas[i].getCoordinatesForCanvas()
